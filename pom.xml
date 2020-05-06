@@ -79,7 +79,7 @@
                                         <limit>
                                             <counter>COMPLEXITY</counter>
                                             <value>TOTALCOUNT</value>
-                                            <maximum>1</maximum>
+                                            <maximum>11</maximum>
                                         </limit>
                                     </limits>
                                 </rule>

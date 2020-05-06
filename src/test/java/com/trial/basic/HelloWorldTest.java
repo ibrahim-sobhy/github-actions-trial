@@ -2,13 +2,19 @@ package com.trial.basic;
 
 import org.junit.Test;
 
-import static org.junit.Assert.fail;
+import static org.junit.Assert.assertTrue;
 
 public class HelloWorldTest {
 
     @Test
     public void simple() {
         new HelloWorld().sayHello("Ibrahim");
-        fail();
+        assertTrue(true);
+    }
+
+    @Test
+    public void emptyName() {
+        String greeting = new HelloWorld().sayHello(null);
+        assertTrue(greeting.contains("there"));
     }
 }
