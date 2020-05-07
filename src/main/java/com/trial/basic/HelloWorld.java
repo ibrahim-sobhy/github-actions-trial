@@ -9,4 +9,15 @@ public class HelloWorld {
         }
         return "Hello, " + name;
     }
+
+    public String sayHello(String firstName, String lastName) {
+        if (Objects.isNull(firstName)) {
+            firstName = "there";
+        }
+        if (Objects.isNull(lastName)) {
+            lastName = "";
+        }
+
+        return String.format("Hello, %s %s", firstName, lastName);
+    }
 }
