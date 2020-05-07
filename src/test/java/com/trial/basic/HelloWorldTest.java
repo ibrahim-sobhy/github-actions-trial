@@ -11,4 +11,10 @@ public class HelloWorldTest {
         new HelloWorld().sayHello("Ibrahim");
         assertTrue(true);
     }
+
+    @Test
+    public void emptyName() {
+        String greeting = new HelloWorld().sayHello(null);
+        assertTrue(greeting.contains("there"));
+    }
 }
