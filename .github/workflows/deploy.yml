@@ -30,6 +30,9 @@ jobs:
         with:
           java-version: 11
 
+      - name: Maven Build
+        run: mvn clean package -DskipTests=true
+
       - name: Login to ECR
         env:
           AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
