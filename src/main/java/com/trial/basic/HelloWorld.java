@@ -20,4 +20,8 @@ public class HelloWorld {
 
         return String.format("Hello, %s %s", firstName, lastName);
     }
+
+    public String hiWorld(String theDay) {
+        return String.format("Hi World %s", theDay);
+    }
 }

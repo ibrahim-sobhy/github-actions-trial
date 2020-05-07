@@ -36,4 +36,10 @@ public class HelloWorldTest {
         String greeting = new HelloWorld().sayHello(null, null);
         assertEquals("Hello, there ", greeting);
     }
+
+    @Test
+    public void hiWorld() {
+        String greeting = new HelloWorld().hiWorld("Saturday");
+        assertEquals("Hi World Saturday", greeting);
+    }
 }
