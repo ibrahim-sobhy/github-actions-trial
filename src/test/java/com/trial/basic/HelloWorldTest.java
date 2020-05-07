@@ -30,4 +30,10 @@ public class HelloWorldTest {
         String greeting = new HelloWorld().sayHello("John", null);
         assertEquals("Hello, John ", greeting);
     }
+
+    @Test
+    public void sayHelloNoFirstName() {
+        String greeting = new HelloWorld().sayHello(null, null);
+        assertEquals("Hello, there ", greeting);
+    }
 }
