@@ -38,5 +38,5 @@ jobs:
 
       - name: Upload to ECR Docker Registry
         run: |
-          docker build -t ${ECR_REPO}:${VERSION} .
+          docker build -t ${ECR_REPO}:$GITHUB_SHA .
           docker push ${ECR_REPO}:${VERSION}
