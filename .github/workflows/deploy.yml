@@ -31,7 +31,7 @@ jobs:
           java-version: 11
 
       - name: Maven Build
-        run: mvn clean package -DskipTests=true
+        run: mvn clean verify package -DskipTests=true
 
       - name: Login to ECR
         env:
