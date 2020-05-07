@@ -2,7 +2,8 @@ name: Continious Integrations
 
 on:
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   test_pull_request:

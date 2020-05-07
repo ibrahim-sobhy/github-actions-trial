@@ -2,12 +2,13 @@ name: Deploy to ECS
 
 on:
   push:
-    branchs: [ master ]
+    branchs:
+      - master
 
 env:
   ECR_REPO: 349275767292.dkr.ecr.eu-west-1.amazonaws.com/github-action-trial
   AWS_DEFAULT_REGION: eu-west-1
-  VERSION: ${git rev-parse --short HEAD}
+  VERSION: $(git rev-parse --short HEAD)
 
 jobs:
   deploy:
