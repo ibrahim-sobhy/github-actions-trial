@@ -70,4 +70,5 @@ jobs:
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           cluster: mycluster
+          service: GitHub-actions-service
           wait-for-service-stability: true
