@@ -47,6 +47,8 @@ jobs:
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
+        with:
+          registries: 349275767292
 
       - name: Upload to ECR Docker Registry
         run: |
