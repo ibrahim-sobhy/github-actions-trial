@@ -54,3 +54,18 @@ jobs:
         run: |
           docker build -t ${ECR_REPO}:$GITHUB_SHA .
           docker push ${ECR_REPO}:$GITHUB_SHA
+
+      - name: Fill in the new image ID in the Amazon ECS task definition
+        id: task-def
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: task-definition.json
+          container-name: Github-actions-trial
+          image: ${ECR_REPO}:$GITHUB_SHA
+
+      - name: Deploy Amazon ECS task definition
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        with:
+          task-definition: ${{ steps.task-def.outputs.task-definition }}
+          cluster: mycluster
+          wait-for-service-stability: true
