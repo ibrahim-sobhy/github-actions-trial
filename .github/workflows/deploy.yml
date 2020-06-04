@@ -5,6 +5,8 @@ on:
     branchs:
       - master
     types: [ closed ]
+  push:
+    - master
 
 env:
   ECR_REPO: 349275767292.dkr.ecr.eu-west-1.amazonaws.com/github-action-trial
