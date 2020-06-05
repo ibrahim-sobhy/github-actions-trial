@@ -17,6 +17,9 @@ jobs:
         run: |
           echo "${{ toJson(github.event.client_payload) }}"
 
+      - name: Checkout code
+          uses: actions/checkout@master
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
