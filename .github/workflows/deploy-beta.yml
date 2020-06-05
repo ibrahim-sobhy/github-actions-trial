@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Echo payload
         run: |
-          echo "${{ github.event.client_payload }}"
+          echo "${{ toJson(github.event.client_payload) }}"
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
