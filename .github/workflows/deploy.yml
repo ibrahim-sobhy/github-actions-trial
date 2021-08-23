@@ -22,6 +22,7 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.14.0
         with:
+            channel-id: test-slack-app
             slack-message: 'posting from a github action!'
         env:
             SLACK_BOT_TOKEN: https://hooks.slack.com/services/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
