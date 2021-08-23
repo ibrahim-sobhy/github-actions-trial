@@ -9,14 +9,6 @@ jobs:
   test_pull_request:
     runs-on: ubuntu-latest
     steps:
-      - name: Post to a Slack channel
-        id: slack
-        uses: slackapi/slack-github-action@v1.14.0
-        with:
-            slack-message: 'posting from a github action!'
-        env:
-            SLACK_BOT_TOKEN: https://hooks.slack.com/services/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
-          
       - name: Checkout code
         uses: actions/checkout@v2
 
