@@ -25,7 +25,7 @@ jobs:
             channel-id: test-slack-app
             slack-message: 'posting from a github action!'
         env:
-            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+            SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
       - name: Checkout code
         uses: actions/checkout@master
 
